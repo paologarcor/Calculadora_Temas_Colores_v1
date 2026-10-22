@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Lavender Theme -->
+    <color name="lavender_bg">#F7F2FF</color>
+    <color name="lavender_op">#E6DFFF</color>
+    <color name="lavender_equal">#B19CD9</color>
+    <color name="lavender_text">#4A3E66</color>
+    <color name="lavender_text_secondary">#8E84A3</color>
+
+    <!-- Mint Theme -->
+    <color name="mint_bg">#F0F9F7</color>
+    <color name="mint_op">#D1EAE5</color>
+    <color name="mint_equal">#98D1C8</color>
+    <color name="mint_text">#3A4D4A</color>
+    <color name="mint_text_secondary">#728C88</color>
+
+    <!-- Peach Theme -->
+    <color name="peach_bg">#FFF5F2</color>
+    <color name="peach_op">#FFE5DE</color>
+    <color name="peach_equal">#F5A691</color>
+    <color name="peach_text">#593D35</color>
+    <color name="peach_text_secondary">#A3867E</color>
+
+    <color name="shadow_color">#1A000000</color>
+
+    <!-- Compatibility Aliases (Primary) -->
+    <color name="bg_lavender_light">@color/lavender_bg</color>
+    <color name="text_purple_dark">@color/lavender_text</color>
+    <color name="text_purple_medium">@color/lavender_text_secondary</color>
+    <color name="btn_op_lavender">@color/lavender_op</color>
+    <color name="btn_equal_lavender">@color/lavender_equal</color>
+    <color name="btn_num_white">#FFFFFF</color>
+</resources>

@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Calculadora</string>
+    <string name="menu">Menu</string>
+    <string name="toggle_theme">Toggle Theme</string>
+    <string name="op_ac">AC</string>
+    <string name="op_plus_minus">+/-</string>
+    <string name="op_percent">%</string>
+    <string name="op_divide">÷</string>
+    <string name="op_multiply">×</string>
+    <string name="op_minus">-</string>
+    <string name="op_plus">+</string>
+    <string name="op_equal">=</string>
+    <string name="num_0">0</string>
+    <string name="num_1">1</string>
+    <string name="num_2">2</string>
+    <string name="num_3">3</string>
+    <string name="num_4">4</string>
+    <string name="num_5">5</string>
+    <string name="num_6">6</string>
+    <string name="num_7">7</string>
+    <string name="num_8">8</string>
+    <string name="num_9">9</string>
+    <string name="comma">,</string>
+    <string name="default_operation">12 + 8 × 2</string>
+    <string name="default_result">28</string>
+    <string name="header_image_desc">Header Image</string>
+</resources>

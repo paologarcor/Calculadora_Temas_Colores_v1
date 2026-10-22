@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_lavender_light"
+    tools:context=".MainActivity">
+
+    <!-- Top Display Section (35%) -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/displaySection"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.35"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="24dp">
+
+        <ImageView
+            android:id="@+id/btnMenu"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:padding="12dp"
+            android:src="@drawable/ic_menu"
+            android:contentDescription="@string/menu"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+
+        <!-- Removed Moon Icon -->
+
+        <ImageView
+            android:id="@+id/imgHeader"
+            android:layout_width="100dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/header_image_desc"
+            android:src="@drawable/img_top"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/tvOperation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_purple_medium"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif"
+            app:layout_constraintBottom_toTopOf="@id/tvResult"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="8dp"
+            tools:text="12 + 8 × 2" />
+
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/num_0"
+            android:textColor="@color/text_purple_dark"
+            android:textSize="54sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="4dp"
+            android:background="@color/btn_op_lavender"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:alpha="0.5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Bottom Keyboard Section (65%) -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/keyboardSection"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.65"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="12dp"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.Calculadora.Keyboard"
+        app:strokeWidth="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:weightSum="5">
+
+            <!-- Row 1 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAC"
+                    style="@style/Widget.Calculadora.Button.Op"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/op_ac"
+                    android:textSize="20sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnPlusMinus"
+                    style="@style/Widget.Calculadora.Button.Op"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/op_plus_minus"
+                    android:textSize="20sp" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnPercent"
+                    style="@style/Widget.Calculadora.Button.Op"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/op_percent" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnDivide"
+                    style="@style/Widget.Calculadora.Button.Op"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/op_divide" />
+            </LinearLayout>
+
+            <!-- Row 2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn7"
+                    style="@style/Widget.Calculadora.Button.Num"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/num_7" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn8"
+                    style="@style/Widget.Calculadora.Button.Num"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/num_8" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn9"
+                    style="@style/Widget.Calculadora.Button.Num"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/num_9" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnMultiply"
+                    style="@style/Widget.Calculadora.Button.Op"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/op_multiply" />
+            </LinearLayout>
+
+            <!-- Row 3 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn4"
+                    style="@style/Widget.Calculadora.Button.Num"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/num_4" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn5"
+                    style="@style/Widget.Calculadora.Button.Num"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/num_5" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn6"
+                    style="@style/Widget.Calculadora.Button.Num"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/num_6" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnMinus"
+                    style="@style/Widget.Calculadora.Button.Op"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/op_minus" />
+            </LinearLayout>
+
+            <!-- Row 4 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn1"
+                    style="@style/Widget.Calculadora.Button.Num"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/num_1" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn2"
+                    style="@style/Widget.Calculadora.Button.Num"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/num_2" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn3"
+                    style="@style/Widget.Calculadora.Button.Num"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/num_3" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnPlus"
+                    style="@style/Widget.Calculadora.Button.Op"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/op_plus" />
+            </LinearLayout>
+
+            <!-- Row 5 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn0"
+                    style="@style/Widget.Calculadora.Button.Num"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/num_0" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnComma"
+                    style="@style/Widget.Calculadora.Button.Num"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/comma" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnEqual"
+                    style="@style/Widget.Calculadora.Button.Equal"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="@string/op_equal" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
